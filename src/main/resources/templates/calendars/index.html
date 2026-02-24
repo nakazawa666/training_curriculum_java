@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  
     <form th:action="@{/calendars}" th:object="${planForm}" method="post" class="form">
       <label for="date" class="label">日付を選択</label>
       <input type="date" id="date" th:field="*{date}" class="date-select"/>
@@ -18,7 +17,7 @@
 
       <button type="submit">保存</button>
     </form>
-  
+
     <div class="calendar">
       <div th:each="day : ${weekDays}">
         <div class="item">
@@ -31,6 +30,6 @@
         </div>
       </div>
     </div>
-  
+
 </body>
 </html>
